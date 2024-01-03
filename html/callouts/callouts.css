@@ -1,0 +1,318 @@
+.callout_container {
+  border-radius: 6px;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-foundations-bold, #C2C7D0);
+  background: var(--background-foundations-subtlest, #F4F5F5);
+}
+
+.callout_container a {
+  color: #505050;
+}
+
+.callout_container a:hover {
+  color: #7B7B7B;
+}
+
+.callout_container h3 {
+  margin: 0 0 0.5rem;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto;
+  font-size: 17.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.callout_container p,
+.callout_container a,
+.content_container ul {
+  margin: 0;
+  color: var(--text-foundations-boldest, #0C1E3D);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.callout_container .icon svg {
+  margin-bottom: 3px;
+}
+
+.callout_container a {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Specific styles for each callout type */
+.error_callout_container {
+  border: 1px solid var(--border-danger-subtle, #FC365E);
+  background: var(--background-danger-subtler, #FFEDF1);
+}
+
+.error_callout_container h3,
+.error_callout_container a {
+  color: #FF6D8B;
+}
+
+.error_callout_container svg path {
+  stroke: #FF6D8B;
+}
+
+.error_callout_container a:hover {
+  color: #6B1F2F;
+}
+
+.error_callout_container p {
+  color: #B56978;
+}
+
+.info_callout_container {
+  border: 1px solid var(--border-info-subtle, #96C4EB);
+  background: var(--background-info-subtler, #E9ECFF);
+}
+
+.info_callout_container h3,
+.info_callout_container a {
+  color: #4860F5;
+}
+
+.info_callout_container svg path {
+  stroke: #4860F5;
+}
+
+.info_callout_container a:hover {
+  color: #283652;
+}
+
+.info_callout_container p {
+  color: #283652;
+}
+
+.success_callout_container {
+  border: 1px solid var(--border-success-subtle, #A4D8C2);
+  background: var(--background-success-subtler, #E7FFF3);
+}
+
+.success_callout_container h3,
+.success_callout_container a {
+  color: #208F59;
+}
+
+.success_callout_container svg path {
+  stroke: #208F59;
+}
+
+.success_callout_container a:hover {
+  color: #4F7764;
+}
+
+.success_callout_container p {
+  color: #4F7764;
+}
+
+.warning_callout_container {
+  border: 1px solid var(--border-warning-subtle, #EBD697);
+  background: var(--background-warning-subtler, #FFF9F1);
+}
+
+.warning_callout_container h3,
+.warning_callout_container a {
+  color: #F4982B;
+}
+
+.warning_callout_container svg path,
+.warning_callout_container svg circle {
+  stroke: #F4982B;
+}
+
+.warning_callout_container a:hover {
+  color: #80776C;
+}
+
+.warning_callout_container p {
+  color: #80776C;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-color-mode="system"] .callout_container {
+    background-color: #2C2C2C !important;
+  }
+
+  [data-color-mode="system"] .callout_container h3,
+  [data-color-mode="system"] .callout_container a {
+    color: #FFF !important;
+  }
+
+  [data-color-mode="system"] .callout_container svg path {
+    stroke: #FFF !important;
+  }
+
+  [data-color-mode="system"] .callout_container p {
+    color: #B8B8B8 !important;
+  }
+
+  [data-color-mode="system"] .error_callout_container {
+    background-color: #362528 !important;
+  }
+
+  [data-color-mode="system"] .error_callout_container h3,
+  [data-color-mode="system"] .error_callout_container a {
+    color: #FF94A9 !important;
+  }
+
+  [data-color-mode="system"] .error_callout_container svg path {
+    stroke: #FF94A9 !important;
+  }
+
+  [data-color-mode="system"] .error_callout_container p {
+    color: #F1B6C2 !important;
+  }
+
+  [data-color-mode="system"] .info_callout_container {
+    background-color: #2E303E !important;
+  }
+
+  [data-color-mode="system"] .info_callout_container h3,
+  [data-color-mode="system"] .info_callout_container a {
+    color: #9DABFF !important;
+  }
+
+  [data-color-mode="system"] .info_callout_container svg path {
+    stroke: #9DABFF !important;
+  }
+
+  [data-color-mode="system"] .info_callout_container p {
+    color: #6A80AC !important;
+  }
+
+  [data-color-mode="system"] .success_callout_container {
+    background-color: #303D36 !important;
+  }
+
+  [data-color-mode="system"] .success_callout_container h3,
+  [data-color-mode="system"] .success_callout_container a {
+    color: #26D07C !important;
+  }
+
+  [data-color-mode="system"] .success_callout_container svg path {
+    stroke: #26D07C !important;
+  }
+
+  [data-color-mode="system"] .success_callout_container p {
+    color: #86C5A7 !important;
+  }
+
+  [data-color-mode="system"] .warning_callout_container {
+    background-color: #3C3630 !important;
+  }
+
+  [data-color-mode="system"] .warning_callout_container h3,
+  [data-color-mode="system"] .warning_callout_container a {
+    color: #FFB256 !important;
+  }
+
+  [data-color-mode="system"] .warning_callout_container svg path,
+  [data-color-mode="system"] .warning_callout_container svg circle {
+    stroke: #FFB256 !important;
+  }
+
+  [data-color-mode="system"] .warning_callout_container p {
+    color: #CEC2B3 !important;
+  }
+}
+
+[data-color-mode="dark"] .callout_container {
+  background-color: #2C2C2C !important;
+}
+
+[data-color-mode="dark"] .callout_container h3,
+[data-color-mode="dark"] .callout_container a {
+  color: #FFF !important;
+}
+
+[data-color-mode="dark"] .callout_container svg path {
+  stroke: #FFF !important;
+}
+
+[data-color-mode="dark"] .callout_container p {
+  color: #B8B8B8 !important;
+}
+
+[data-color-mode="dark"] .error_callout_container {
+  background-color: #362528 !important;
+}
+
+[data-color-mode="dark"] .error_callout_container h3,
+[data-color-mode="dark"] .error_callout_container a {
+  color: #FF94A9 !important;
+}
+
+[data-color-mode="dark"] .error_callout_container svg path {
+  stroke: #FF94A9 !important;
+}
+
+[data-color-mode="dark"] .error_callout_container p {
+  color: #F1B6C2 !important;
+}
+
+[data-color-mode="dark"] .info_callout_container {
+  background-color: #2E303E !important;
+}
+
+[data-color-mode="dark"] .info_callout_container h3,
+[data-color-mode="dark"] .info_callout_container a {
+  color: #9DABFF !important;
+}
+
+[data-color-mode="dark"] .info_callout_container svg path {
+  stroke: #9DABFF !important;
+}
+
+[data-color-mode="dark"] .info_callout_container p {
+  color: #6A80AC !important;
+}
+
+[data-color-mode="dark"] .success_callout_container {
+  background-color: #303D36 !important;
+}
+
+[data-color-mode="dark"] .success_callout_container h3,
+[data-color-mode="dark"] .success_callout_container a {
+  color: #26D07C !important;
+}
+
+[data-color-mode="dark"] .success_callout_container svg path {
+  stroke: #26D07C !important;
+}
+
+[data-color-mode="dark"] .success_callout_container p {
+  color: #86C5A7 !important;
+}
+
+[data-color-mode="dark"] .warning_callout_container {
+  background-color: #3C3630 !important;
+}
+
+[data-color-mode="dark"] .warning_callout_container h3,
+[data-color-mode="dark"] .warning_callout_container a {
+  color: #FFB256 !important;
+}
+
+[data-color-mode="dark"] .warning_callout_container svg path,
+[data-color-mode="dark"] .warning_callout_container svg circle {
+  stroke: #FFB256 !important;
+}
+
+[data-color-mode="dark"] .warning_callout_container p {
+  color: #CEC2B3 !important;
+}

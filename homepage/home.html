@@ -69,12 +69,13 @@
       margin-bottom: 16px;
       margin-right: 32px;
       min-width: 50%;
+      max-width: 417px;
     }
 
     .hero_container .header_img {
       z-index: 0;
-      width: 300px;
-      height: 200px;
+      max-width: 417px;
+      height: 300px;
       background-size: cover;
       background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img.png');
     }
@@ -215,13 +216,59 @@
 
     /* ************************ DARK MODE ************************ */
     @media (prefers-color-scheme: dark) {
+      [data-color-mode="system"] .LandingWrap16kRMSdr5J8g,
+      [data-color-mode="system"] .body_container,
+      [data-color-mode="system"] .rm-LandingPage {
+        background-color: #1F282D !important;
+      }
+
       [data-color-mode="system"] .hero_container .header_img {
-        background-image: purple;
+        background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img-darkmode.png');
+      }
+
+      [data-color-mode="system"] .hero_container .hero_content p {
+        color: #fff !important;
+      }      
+
+      [data-color-mode="system"] .hero_container .hero_btn {
+        color: #242E34;
+      }
+
+      [data-color-mode="system"] .cards_container {
+        background-color: #242E34 !important;
+      }
+
+      [data-color-mode="system"] .cards_container .card {
+        background-color: #11191E !important;
+        color: #fff;
       }
     }
 
+    [data-color-mode="dark"] .LandingWrap16kRMSdr5J8g,
+    [data-color-mode="dark"] .body_container,
+    [data-color-mode="dark"] .rm-LandingPage {
+      background-color: #1F282D !important;
+    }
+
     [data-color-mode="dark"] .hero_container .header_img {
-      background-image: purple;
+      background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img-darkmode.png');
+    }
+
+    [data-color-mode="dark"] .hero_container .hero_content p {
+      color: #fff !important;
+    }
+
+    [data-color-mode="dark"] .hero_container .hero_btn {
+        color: #242E34;
+      }
+
+    [data-color-mode="dark"] .cards_container {
+      background-color: #242E34 !important;
+    }
+
+    [data-color-mode="dark"] .cards_container .card {
+      background-color: #11191E !important;
+      color: #fff;
     }
 
     /* ************************ MEDIA QUERIES ************************ */
@@ -235,12 +282,6 @@
       }
     }
 
-    @media only screen and (max-width: 1200px) {
-      /* .cards_container .card {
-        width: 300px;
-      } */
-    }
-
     @media only screen and (max-width: 1065px) {
       .hero_container h1 {
         font-size: 60px;
@@ -250,6 +291,10 @@
     @media only screen and (max-width: 1000px) {
       .cards_container {
         flex-wrap: wrap;
+      }
+
+      .hero_container .header_img {
+        width: 100%;
       }
     }
 
@@ -263,6 +308,10 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        width: 408px;
+      }
+
+      .hero_container .header_img {
         width: 408px;
       }
     }
@@ -282,14 +331,6 @@
         margin: 0;
       }
 
-      .hero_container .header_img {
-        display: flex;
-      }
-
-      .hero_container .header_img img {
-        width: 300px;
-        margin: auto !important;
-      }
     }
 
     @media only screen and (max-width: 700px) {
@@ -317,6 +358,12 @@
         font-size: 35px;
       }
 
+      .hero_container .header_img {
+        width: 300px;
+        height: 220px;
+        margin: auto;
+      }
+
       .hero_container p {
         font-size: 15px !important;
         margin-bottom: 20px !important;
@@ -328,6 +375,11 @@
         width: auto;
       }
 
+      .hero_container .header_img {
+        width: 300px;
+        height: 200px;
+      }
+
       .cards_container .card {
         flex-basis: 90% !important;
         width: 90% !important;
@@ -335,16 +387,21 @@
     }
 
     @media only screen and (max-width: 396px) {
+      .hero_container .header_img {
+        width: 200px;
+        height: 150px;
+      }
 
       .hero_container p,
       .card_text p,
       .card_text a {
         font-size: 15px;
       }
+    }
 
-      .hero_container .header_img img {
-        width: 200px;
-        margin: auto !important;
+    @media only screen and (max-width: 310px) {
+      .hero_container .header_img {
+        display: none;
       }
     }
   </style>
