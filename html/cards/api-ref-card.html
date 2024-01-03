@@ -1,0 +1,360 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  .api_card_container {
+    margin: 0 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .api_card_container .card {
+    display: inline-flex;
+    padding: 40px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 6px;
+    border: 1px solid #F0F0F0;
+    background: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+  .api_card_container .card .title {
+    display: flex;
+    gap: 16px;
+  }
+
+  .api_card_container .card .title h3 {
+    color: #383838;
+    font-size: 17.5px;
+    font-weight: 700;
+    margin: 0;
+    align-self: center;
+  }
+
+  .api_card_container .card .content {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .api_card_container .card .content b {
+    color: #676767;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .api_card_container .card .title p {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    flex-shrink: 0;
+    color: #FFF !important;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 40px;
+    height: 16px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .api_card_container .post {
+    background: #4860F5;
+  }
+
+  .api_card_container .get {
+    background: #26D07C;
+  }
+
+  .api_card_container .card_links div {
+    color: #00D1A2 !important;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 3px 0;
+  }
+
+  .api_card_container .card_links div svg {
+    margin-left: 5px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] .api_card_container .card {
+      border: 1px solid #616674;
+      background-color: #242E34;
+    }
+
+    [data-color-mode="system"] .api_card_container h3 {
+      color: #fff !important;
+    }
+
+    [data-color-mode="system"] .api_card_container .content,
+    [data-color-mode="system"] .api_card_container .content b {
+      color: #B6B6B6;
+    }
+  }
+
+  [data-color-mode="dark"] .api_card_container .card {
+    border: 1px solid #616674;
+    background-color: #242E34;
+  }
+
+  [data-color-mode="dark"] .api_card_container h3 {
+    color: #fff !important;
+  }
+
+  [data-color-mode="dark"] .api_card_container .content,
+  [data-color-mode="dark"] .api_card_container .content b {
+    color: #B6B6B6;
+  }
+
+  .api_card_container .card:hover {
+    border-color: #00D1A2;
+    box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .api_card_container .card_links div:hover {
+    cursor: pointer;
+    font-weight: 550;
+  }
+
+  @media only screen and (max-width: 520px) {
+    .api_card_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<body>
+  <div class="api_card_container">
+    <div class="card">
+      <div class="title">
+        <h3>Authentication</h3>
+        <p class="post">POST</p>
+      </div>
+      <p class="content">Obtain your <b>access_token</b> to use IDX API.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/authentication';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/create-your-access-token';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <h3>Certificate</h3>
+        <p class="get">GET</p>
+      </div>
+      <p class="content">Obtain a base64 binary-to-text encoding scheme corresponding to a specific certificate.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/certificate-request';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/get-certificate';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/the-certificate-object';">Response Object
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <h3>Search Individual</h3>
+        <p class="post">POST</p>
+      </div>
+      <p class="content">With details from an individual you can get the <b>citizen_referenceId</b>.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/individual-request';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/search-individual';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <h3>Retrieve Individual Details</h3>
+        <p class="get">GET</p>
+      </div>
+      <p class="content">With a <b>citizen_referenceId</b>, retrieve all details from our 11 agencies.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/individual-request';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/retrieve-individual-details';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/details-object';">Response Object
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <h3>Search Entity</h3>
+        <p class="post">POST</p>
+      </div>
+      <p class="content">With details from an entity you can get the <b>corporate_referenceId</b>.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/entity-request';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/search-entity';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">
+        <h3>Retrieve Entity Details</h3>
+        <p class="get">GET</p>
+      </div>
+      <p class="content">With a <b>corporate_referenceId</b>, retrieve all details from our 11 agencies.</p>
+      <div class="card_links">
+        <div onclick="window.location='https://idx.readme.io/reference/entity-request';">Guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/retrieve-entity-details';">Endpoint
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+        <div onclick="window.location='https://idx.readme.io/reference/details-object';">Response Object
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.13897 8.99966C7.66344 8.99966 7.27795 8.61418 7.27795 8.13867V1.72199L0.861027 1.72199C0.385495 1.72199 3.30401e-07 1.33651 0 0.860994C2.50232e-07 0.38548 0.385495 -2.50223e-07 0.861027 0L8.13897 9.10642e-07C8.61451 1.01571e-06 9 0.385481 9 0.860995L9 8.13867C9 8.61418 8.61451 8.99966 8.13897 8.99966Z"
+              fill="#00D1A2" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.83827 1.16222C8.17452 1.49846 8.17452 2.04362 7.83827 2.37986L1.47006 8.74782C1.13381 9.08406 0.588641 9.08406 0.252389 8.74782C-0.0838633 8.41158 -0.0838631 7.86643 0.252389 7.53019L6.62059 1.16222C6.95684 0.825985 7.50202 0.825985 7.83827 1.16222Z"
+              fill="#00D1A2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
