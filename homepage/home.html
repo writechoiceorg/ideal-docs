@@ -71,10 +71,13 @@
       min-width: 50%;
     }
 
-    .hero_container .header_img img {
-      max-width: 417px;
+    .hero_container .header_img {
+      z-index: 0;
+      width: 300px;
+      height: 200px;
+      background-size: cover;
+      background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img.png');
     }
-
 
     .hero_container h1 {
       color: #282A30;
@@ -210,6 +213,17 @@
       justify-self: end;
     }
 
+    /* ************************ DARK MODE ************************ */
+    @media (prefers-color-scheme: dark) {
+      [data-color-mode="system"] .hero_container .header_img {
+        background-image: purple;
+      }
+    }
+
+    [data-color-mode="dark"] .hero_container .header_img {
+      background-image: purple;
+    }
+
     /* ************************ MEDIA QUERIES ************************ */
     @media only screen and (max-width: 1320px) {
       .cards_container .card {
@@ -321,6 +335,7 @@
     }
 
     @media only screen and (max-width: 396px) {
+
       .hero_container p,
       .card_text p,
       .card_text a {
@@ -342,8 +357,6 @@
       <div class="hero_container">
         <div class="hero_title">
           <div class="header_img">
-            <img src="https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img.png"
-              alt="">
           </div>
         </div>
         <div class="hero_content">
