@@ -54,6 +54,7 @@
 }
 
 /* Specific styles for each callout type */
+/* --------------------- ERROR --------------------- */
 .error_callout_container {
   border: 1px solid var(--border-danger-subtle, #FC365E);
   background: var(--background-danger-subtler, #FFEDF1);
@@ -76,6 +77,7 @@
   color: #B56978;
 }
 
+/* --------------------- INFO --------------------- */
 .info_callout_container {
   border: 1px solid var(--border-info-subtle, #96C4EB);
   background: var(--background-info-subtler, #E9ECFF);
@@ -98,6 +100,7 @@
   color: #283652;
 }
 
+/* --------------------- SUCCESS --------------------- */
 .success_callout_container {
   border: 1px solid var(--border-success-subtle, #A4D8C2);
   background: var(--background-success-subtler, #E7FFF3);
@@ -120,6 +123,7 @@
   color: #4F7764;
 }
 
+/* --------------------- WARNING --------------------- */
 .warning_callout_container {
   border: 1px solid var(--border-warning-subtle, #EBD697);
   background: var(--background-warning-subtler, #FFF9F1);
@@ -144,6 +148,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  /* --------------------- NEUTRAL --------------------- */
   [data-color-mode="system"] .callout_container {
     background-color: #2C2C2C !important;
   }
@@ -161,6 +166,7 @@
     color: #B8B8B8 !important;
   }
 
+  /* --------------------- ERROR --------------------- */
   [data-color-mode="system"] .error_callout_container {
     background-color: #362528 !important;
   }
@@ -178,6 +184,7 @@
     color: #F1B6C2 !important;
   }
 
+  /* --------------------- INFO --------------------- */
   [data-color-mode="system"] .info_callout_container {
     background-color: #2E303E !important;
   }
@@ -195,6 +202,7 @@
     color: #6A80AC !important;
   }
 
+  /* --------------------- SUCCESS --------------------- */
   [data-color-mode="system"] .success_callout_container {
     background-color: #303D36 !important;
   }
@@ -212,6 +220,7 @@
     color: #86C5A7 !important;
   }
 
+  /* --------------------- WARNING --------------------- */
   [data-color-mode="system"] .warning_callout_container {
     background-color: #3C3630 !important;
   }
@@ -231,6 +240,7 @@
   }
 }
 
+/* --------------------- NEUTRAL --------------------- */
 [data-color-mode="dark"] .callout_container {
   background-color: #2C2C2C !important;
 }
@@ -248,6 +258,7 @@
   color: #B8B8B8 !important;
 }
 
+/* --------------------- ERROR --------------------- */
 [data-color-mode="dark"] .error_callout_container {
   background-color: #362528 !important;
 }
@@ -265,6 +276,7 @@
   color: #F1B6C2 !important;
 }
 
+/* --------------------- INFO --------------------- */
 [data-color-mode="dark"] .info_callout_container {
   background-color: #2E303E !important;
 }
@@ -282,6 +294,7 @@
   color: #6A80AC !important;
 }
 
+/* --------------------- SUCCESS --------------------- */
 [data-color-mode="dark"] .success_callout_container {
   background-color: #303D36 !important;
 }
@@ -299,6 +312,7 @@
   color: #86C5A7 !important;
 }
 
+/* --------------------- WARNING --------------------- */
 [data-color-mode="dark"] .warning_callout_container {
   background-color: #3C3630 !important;
 }
