@@ -53,11 +53,10 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      width: 95%;
+      width: 1310px;
       height: 461px;
       flex-shrink: 0;
-      margin: auto;
-      margin-top: 20px;
+      margin: 20px auto;
       border-radius: 20px;
     }
 
@@ -231,10 +230,6 @@
         background-color: #1F282D !important;
       }
 
-      [data-color-mode="system"] .hero_container .header_img {
-        background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img-darkmode.png');
-      }
-
       [data-color-mode="system"] .hero_container .hero_content p {
         color: #fff !important;
       }
@@ -259,10 +254,6 @@
       background-color: #1F282D !important;
     }
 
-    [data-color-mode="dark"] .hero_container .header_img {
-      background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/header-img-darkmode.png');
-    }
-
     [data-color-mode="dark"] .hero_container .hero_content p {
       color: #fff !important;
     }
@@ -281,6 +272,12 @@
     }
 
     /* ************************ MEDIA QUERIES ************************ */
+    @media only screen and (max-width: 1375px) {
+      .header_container {
+        width: 95%;
+      }
+    }
+
     @media only screen and (max-width: 1320px) {
       .cards_container .card {
         width: 350px;
@@ -369,34 +366,36 @@
     }
 
     @media only screen and (max-width: 655px) {
-      
-    }
-
-    @media only screen and (max-width: 595px) {
-      .hero_container h1 {
-        font-size: 35px;
+      .header_container {
+        background-image: url('https://raw.githubusercontent.com/writechoiceorg/ideal-docs/main/homepage/imgs/home-bg-small.png');
       }
 
-      .hero_container .header_img {
-        width: 300px;
-        height: 220px;
+      .hero_container {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
         margin: auto;
       }
 
-      .hero_container p {
-        font-size: 15px !important;
-        margin-bottom: 20px !important;
+      .hero_container .header_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero_content {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero_container .hero_content p {
+        width: 100%;
       }
     }
 
     @media only screen and (max-width: 443px) {
       .hero_container {
         width: auto;
-      }
-
-      .hero_container .header_img {
-        width: 300px;
-        height: 200px;
       }
 
       .cards_container .card {
@@ -406,21 +405,25 @@
     }
 
     @media only screen and (max-width: 396px) {
-      .hero_container .header_img {
-        width: 200px;
-        height: 150px;
-      }
 
-      .hero_container p,
       .card_text p,
       .card_text a {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
     @media only screen and (max-width: 310px) {
-      .hero_container .header_img {
-        display: none;
+      .hero_container .header_img img {
+        width: 150px;
+      }
+
+      .hero_container .hero_content p {
+        font-size: 12px;
+      }
+
+      .hero_container .hero_btn {
+        font-size: 16px;
+        padding: 7px 8px;
       }
     }
   </style>
