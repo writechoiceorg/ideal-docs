@@ -1,0 +1,130 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400 !important;700&display=swap"
+  rel="stylesheet">
+
+<style>
+  table {
+    border-radius: 6px !important;
+    border: 1px solid #E7EAEE !important;
+    overflow-x: auto !important;
+    overflow-y: scroll !important;
+    min-width: 300px !important;
+  }
+
+  table thead {
+    background: #F6F6F6 !important;
+  }
+
+  table thead th {
+    color: #4E4E4E !important;
+    font-feature-settings: 'clig' off, 'liga' off !important;
+    font-family: Roboto !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 18px !important;
+    padding: 30px 25px !important;
+    border: 1px solid #E7EAEE !important;
+  }
+
+  table tbody {
+    background: #FFF !important;
+  }
+
+  table tbody td {
+    color: #676767 !important;
+    font-feature-settings: 'clig' off, 'liga' off !important;
+    font-family: Roboto !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    padding: 30px 25px !important;
+    border: 1px solid #E7EAEE !important;
+    background: #FFF !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] table {
+      border: 1px solid #616674 !important;
+    }
+
+    [data-color-mode="system"] table thead {
+      background: #1E2529 !important;
+    }
+
+    [data-color-mode="system"] table thead th {
+      color: #FFF !important;
+    }
+
+    [data-color-mode="system"] table tbody {
+      background: #242E34 !important;
+    }
+
+    [data-color-mode="system"] table tbody td {
+      color: #B6B6B6 !important;
+      background: #242E34 !important;
+    }
+  }
+
+  [data-color-mode="dark"] table {
+    border: 1px solid #616674 !important;
+  }
+
+  [data-color-mode="dark"] table thead {
+    background: #1E2529 !important;
+  }
+
+  [data-color-mode="dark"] table thead th {
+    color: #FFF !important;
+  }
+
+  [data-color-mode="dark"] table tbody {
+    background: #242E34 !important;
+  }
+
+  [data-color-mode="dark"] table tbody td {
+    color: #B6B6B6 !important;
+    background: #242E34 !important;
+  }
+</style>
+
+<body>
+  <table class="use-case-table">
+    <thead>
+      <tr class="header">
+        <th><b>AgencyResponses object</b></th>
+        <th><b>Agency's endpoint</b> </th>
+        <th><b>Parameter</b></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td rowspan="3">HACIENDA</td>
+        <td>Compliance </td>
+        <td><b>complianceDetail.filingCompliant</b>: Indicates if the individual or entity searched
+          is compliant by being up to date with their tax filings. </td>
+      </tr>
+      <tr>
+        <td>ComplianceDocuments </td>
+        <td><b>documentsDetail.filingCertificate</b>: Base64 encoded - PDF in binary format of
+          letter model SC 6088.</td>
+      </tr>
+      <tr>
+        <td>Compliance </td>
+        <td><b>addressDetail</b>: Specifies the address details.</td>
+      </tr>
+      <tr>
+        <td rowspan="2">DTOP</td>
+        <td>License</td>
+        <td><b>address</b>: Specifies the license holder's address.</td>
+      </tr>
+      <tr>
+        <td>LicensePhoto</td>
+        <td><b>blob_id</b>: The unique identifier (UUID) of the license photo. </td>
+      </tr>
+    </tbody>
+  </table>
+</body>

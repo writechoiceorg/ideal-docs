@@ -1,0 +1,338 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .questions_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accordion_container {
+    display: flex;
+    transition: all .2s;
+    border-radius: 6px;
+    border: 1px solid #E7EAEE;
+    color: #384248;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+  .accordion_container .question {
+    font-weight: 700;
+    font-size: 17.5px;
+  }
+
+  .accordion_container .answer {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .accordion_container:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .control-icon {
+    fill: #384248;
+    transition: .3s ease;
+    pointer-events: none;
+  }
+
+  .control-icon-close {
+    display: none;
+  }
+
+  details[open] .question {
+    color: #00D1A2;
+  }
+
+  details[open] .control-icon-close {
+    display: initial;
+    transition: .3s ease;
+    fill: #00D1A2;
+  }
+
+  details[open] .control-icon-expand {
+    display: none;
+  }
+
+  details[open] {
+    border: 1px solid #00d1a499;
+  }
+
+
+  .accordion_container summary {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .accordion_container summary .question {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+
+  .accordion_container summary .sumary-icon {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  .accordion_container .answer {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    row-gap: 1rem;
+  }
+
+
+
+  details[open] div {
+    animation: sweep .3s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0% {
+      opacity: 0;
+      margin-left: -10px
+    }
+
+    100% {
+      opacity: 1;
+      margin-left: 0px
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] .accordion_container {
+      color: #fff;
+    }
+
+    [data-color-mode="system"] .accordion_container .answer {
+      color: #B6B6B6;
+    }
+
+    [data-color-mode="system"] details[open] {
+      background: #11191E;
+      box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    [data-color-mode="system"] .control-icon {
+      fill: #FFF;
+    }
+  }
+
+  [data-color-mode="dark"] .accordion_container {
+    color: #fff;
+  }
+
+  [data-color-mode="dark"] .accordion_container .answer {
+    color: #B6B6B6;
+  }
+
+  [data-color-mode="dark"] details[open] {
+    background: #11191E;
+    box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  [data-color-mode="dark"] .control-icon {
+      fill: #FFF;
+    }
+</style>
+
+<body>
+  <div class="questions_container">
+    <details class="accordion_container">
+      <summary>
+        <span class="question">What is idx? What does it do? </span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        idx is a Government-to-Government (G2G) data exchange layer and API/Service Hub for agencies to consume
+        governmental compliance, certifications, and data for their applications. It aims to consolidate and digitize
+        all documents held by the Government so that it is the provider of information for citizens or entities.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question">What are the benefits of using idx for my government agency? </span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        The benefits of using idx include improved efficiency, better integration with citizen-facing platforms, and
+        cost savings. By reducing bureaucratic processes and providing immediate access to information, idx can help
+        streamline workflows and speed up administrative processes. Additionally, integrating with idx enables agencies
+        to capture compliance, certification, and additional data from other agencies, improving the quality of services
+        provided to citizens.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question">How do I get started with consuming idx data? </span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        To get started with consuming idx data, you will need to register your agency with idx, obtain credentials, and
+        develop an integration plan. You can then test your integration in a staging or testing environment and
+        coordinate with the idx support team to prepare your integration for deployment to the production environment.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question">What kind of data is available through idx? </span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        IDX currently provides data from 11 agencies. The data available through idx includes compliance, certification,
+        and additional data that can be used by agencies and systems to provide services to citizens.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question"> Is idx data secure?</span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        Yes, idx data is secure. idx adheres to industry-standard security protocols and has measures in place to
+        protect data from unauthorized access.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question"> Can I integrate idx data into my agency's existing systems?</span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        Yes, you can integrate idx data into your agency's existing systems. However, you will need to develop an
+        integration plan and coordinate with the idx support team to ensure that your integration meets the necessary
+        requirements.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question"> What kind of support is available for idx users?</span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        idx has a dedicated support team that can help guide you through the process of consuming its APIs and data. If
+        you have any questions or need assistance at any point, you can reach out to the idx support team for help.
+      </div>
+    </details>
+    <details class="accordion_container">
+      <summary>
+        <span class="question"> How frequently is idx data updated?</span>
+        <div class="sumary-icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="answer">
+        The frequency of updates to idx data may vary depending on the specific data source. However, idx aims to
+        provide up-to-date and accurate data to its users.
+      </div>
+    </details>
+  </div>
+</body>

@@ -1,0 +1,383 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .accordion_div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .accordion_container {
+    display: flex;
+    transition: all .2s;
+    border-radius: 6px;
+    border: 1px solid #E7EAEE;
+    color: #384248;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+  .accordion_container .title {
+    font-weight: 700;
+    font-size: 17.5px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .accordion_container .answer {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .accordion_container:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .control-icon {
+    fill: #384248;
+    transition: .3s ease;
+    pointer-events: none;
+  }
+
+  .control-icon-close {
+    display: none;
+  }
+
+  details[open] .title {
+    color: #00D1A2;
+  }
+
+  details[open] .control-icon-close {
+    display: initial;
+    transition: .3s ease;
+    fill: #00D1A2;
+  }
+
+  details[open] .control-icon-expand {
+    display: none;
+  }
+
+  details[open] {
+    border: 1px solid #00d1a499;
+  }
+
+
+  .accordion_container summary {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .accordion_container summary .icon {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  .accordion_container .answer {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    row-gap: 1rem;
+  }
+
+
+
+  details[open] div {
+    animation: sweep .3s ease-in-out;
+  }
+
+  @keyframes sweep {
+    0% {
+      opacity: 0;
+      margin-left: -10px
+    }
+
+    100% {
+      opacity: 1;
+      margin-left: 0px
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] .accordion_container {
+      color: #fff;
+    }
+
+    [data-color-mode="system"] .accordion_container .answer {
+      color: #B6B6B6;
+    }
+
+    [data-color-mode="system"] details[open] {
+      background: #11191E;
+      box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    [data-color-mode="system"] .control-icon {
+      fill: #FFF;
+    }
+  }
+
+  [data-color-mode="dark"] .accordion_container {
+    color: #fff;
+  }
+
+  [data-color-mode="dark"] .accordion_container .answer {
+    color: #B6B6B6;
+  }
+
+  [data-color-mode="dark"] details[open] {
+    background: #11191E;
+    box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  [data-color-mode="dark"] .control-icon {
+    fill: #FFF;
+  }
+
+  .api_card_container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .api_card_container .card {
+    display: inline-flex;
+    padding: 40px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 6px;
+    border: 1px solid #F0F0F0;
+    background: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+  .api_card_container .card .title {
+    display: flex;
+    gap: 16px;
+  }
+
+  .api_card_container .card .title h3 {
+    color: #383838;
+    font-size: 17.5px;
+    font-weight: 700;
+    margin: 0;
+    align-self: center;
+  }
+
+  .api_card_container .card .content {
+    color: #676767;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .api_card_container .card .content b {
+    color: #676767;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  .api_card_container .card .title p {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    flex-shrink: 0;
+    color: #FFF !important;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 40px;
+    height: 16px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    margin: 0;
+  }
+
+  .api_card_container .post {
+    background: #4860F5;
+  }
+
+  .api_card_container .get {
+    background: #26D07C;
+  }
+
+  .api_card_container .card_links div {
+    color: #00D1A2 !important;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 3px 0;
+  }
+
+  .api_card_container .card_links div svg {
+    margin-left: 5px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] .api_card_container .card {
+      border: 1px solid #616674;
+      background-color: #11191E;
+    }
+
+    [data-color-mode="system"] .api_card_container .card:hover {
+      background-color: #242E34;
+    }
+
+    [data-color-mode="system"] .api_card_container h3 {
+      color: #fff !important;
+    }
+
+    [data-color-mode="system"] .api_card_container .content,
+    [data-color-mode="system"] .api_card_container .content b {
+      color: #B6B6B6;
+    }
+  }
+
+  [data-color-mode="dark"] .api_card_container .card {
+    border: 1px solid #616674;
+    background-color: #11191E;
+  }
+
+  [data-color-mode="dark"] .api_card_container .card:hover {
+      background-color: #242E34;
+    }
+
+  [data-color-mode="dark"] .api_card_container h3 {
+    color: #fff !important;
+  }
+
+  [data-color-mode="dark"] .api_card_container .content,
+  [data-color-mode="dark"] .api_card_container .content b {
+    color: #B6B6B6;
+  }
+
+  .api_card_container .card:hover {
+    border-color: #00D1A2;
+    box-shadow: 1px 1px 4.2px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .api_card_container .card_links div:hover {
+    cursor: pointer;
+    font-weight: 550;
+  }
+
+  @media only screen and (max-width: 520px) {
+    .api_card_container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
+
+<body>
+  <div class="accordion_div">
+
+    <details class="accordion_container">
+      <summary>
+        <span class="question">List of endpoints</span>
+        <div class="icon">
+          <svg class="control-icon control-icon-expand" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+          </svg>
+          <svg class="control-icon control-icon-close" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+          </svg>
+        </div>
+      </summary>
+      <div class="api_card_container">
+
+        <div class="card">
+          <div class="title">
+            <h3>Ping</h3>
+            <p class="get">GET</p>
+          </div>
+          <p>Check if API is reachable.</p>
+          <div class="card_links">
+            <div onclick="window.location='https://idx.readme.io/docs/ping-endpoint';">Details ⮞</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">
+            <h3>Health Check</h3>
+            <p class="get">GET</p>
+          </div>
+          <p>Returns summary of health of API systems.</p>
+          <div class="card_links">
+            <div onclick="window.location='https://idx.readme.io/docs/health-check-endpoint';">Details ⮞</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">
+            <h3>Token Generator</h3>
+            <p class="post">POST</p>
+          </div>
+          <p>Generates access token for authorized users.</p>
+          <div class="card_links">
+            <div onclick="window.location='https://idx.readme.io/docs/token-generator-endpoint';">Details ⮞</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">
+            <h3>Details</h3>
+            <p class="post">POST</p>
+          </div>
+          <p>Queries individual or entity and returns a summary of it’s findings.</p>
+          <div class="card_links">
+            <div onclick="window.location='https://idx.readme.io/docs/details-endpoint';">Details ⮞</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="title">
+            <h3>Certificate</h3>
+            <p class="post">POST</p>
+          </div>
+          <p>Returns a base64 certificate based on the results found for the queried entity.</p>
+          <div class="card_links">
+            <div onclick="window.location='https://idx.readme.io/docs/certificate-endpoint';">Details ⮞</div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+  </div>
+</body>
