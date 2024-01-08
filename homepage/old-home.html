@@ -1,0 +1,406 @@
+<style>
+  .homepage {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 60px;
+    max-width: 800px;
+    /* background-color: #242e34; */
+  }
+
+  .company-logos {
+    padding: 1rem;
+  }
+
+  .company-logos .logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #242e34;
+    padding: 1rem 0;
+    border-radius: 14px;
+  }
+
+  .company-logos .image-containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company-logos .image-containers img {
+    width: 80%;
+  }
+
+  .company-logos .main-text p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0 3rem;
+    text-align: center;
+    color: var(--markdown-text);
+  }
+
+
+  .company-logos img {
+    width: 80%;
+  }
+
+
+  .card-shelf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .card-shelf {
+      grid-template-columns: 1fr;
+    }
+
+    .homepage {
+
+      gap: 0;
+    }
+
+    .company-logos .main-text p {
+      padding: 0 1rem;
+    }
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 14px;
+    border: 1px solid #00d1a2;
+    cursor: pointer;
+    transition: transform .2s;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h3 {
+    color: #00d1a2;
+    /*vertical-align: middle;*/
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .card h3 svg {
+    margin: 0 5px 0 0;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--markdown-text);
+  }
+
+  .card a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
+<body>
+  <div class="homepage">
+    <section class="company-logos">
+      <div class="logos">
+        <div class="image-containers">
+          <img
+            src="https://github.com/cassianomoraes/yuno_card_images/blob/main/IDEAL/Ideal%20Logo%20Ideal%20croped.png?raw=true"
+            alt="Ideal logo">
+        </div>
+        <div class="image-containers">
+          <img
+            src="https://github.com/cassianomoraes/yuno_card_images/blob/main/IDEAL/Ideal%20Logo%20Gobierno.png?raw=true"
+            alt="Puerto Rico Gobierno">
+        </div>
+      </div>
+      <div class="main-text">
+        <p> Explore our guides and examples to start using the Electronic Identification of Online Accesses (IDEAL)
+          provided by the Puerto Rico government. </p>
+      </div>
+    </section>
+
+
+    <section class="card-shelf">
+      <div class="card" onclick="window.location='https://idx.readme.io/docs/what-is-ideal';">
+        <h3>
+
+          <svg enable-background="new 0 0 25 25" height="25" viewBox="0 0 24 24" width="25" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m17.5 24c-3.584 0-6.5-2.916-6.5-6.5s2.916-6.5 6.5-6.5 6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5zm0-12c-3.033 0-5.5 2.467-5.5 5.5s2.467 5.5 5.5 5.5 5.5-2.467 5.5-5.5-2.467-5.5-5.5-5.5z" />
+            <path d="m17.5 21c-.276 0-.5-.224-.5-.5v-4c0-.276.224-.5.5-.5s.5.224.5.5v4c0 .276-.224.5-.5.5z" />
+            <circle cx="17.5" cy="14.5" r=".5" />
+            <path
+              d="m8.839 15.55c-.074 0-.149-.017-.221-.051-1.228-.605-2.551-.833-3.934-.682-.432.051-.866-.085-1.189-.373-.314-.28-.495-.682-.495-1.104v-11.75c0-.748.559-1.391 1.3-1.495 2.388-.353 4.642.311 6.7 1.982 2.058-1.67 4.309-2.337 6.703-1.981.738.103 1.297.746 1.297 1.494v6.91c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-6.91c0-.252-.189-.47-.44-.505-2.252-.335-4.29.328-6.231 2.022-.188.164-.469.164-.657 0-1.943-1.695-3.979-2.357-6.229-2.023-.254.036-.443.253-.443.506v11.75c0 .139.057.266.16.357.11.098.257.144.412.126 1.576-.175 3.086.087 4.489.778.248.122.349.422.228.67-.088.176-.265.279-.45.279z" />
+            <path
+              d="m21.5 10c-.276 0-.5-.224-.5-.5v-6c0-.276-.224-.5-.5-.5h-2c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h2c.827 0 1.5.673 1.5 1.5v6c0 .276-.224.5-.5.5z" />
+            <path
+              d="m8.5 17h-7c-.827 0-1.5-.673-1.5-1.5v-12c0-.812.669-1.485 1.491-1.5h2.009c.276 0 .5.224.5.5s-.224.5-.5.5h-2c-.271.005-.5.229-.5.5v12c0 .276.224.5.5.5h7c.276 0 .5.224.5.5s-.224.5-.5.5z" />
+            <path d="m11 12c-.276 0-.5-.224-.5-.5v-9c0-.276.224-.5.5-.5s.5.224.5.5v9c0 .276-.224.5-.5.5z" />
+          </svg>
+          What is IDEAL
+        </h3>
+        <p>
+          Get to know how the IDEAL solution, its objectives and history, and how Puerto Rico's government supports it.
+        </p>
+      </div>
+      <div class="card" onclick="window.location='https://idx.readme.io/docs/agencies-integrated-into-idx';">
+        <h3>
+          <svg enable-background="new 0 0 25 25" height="25" viewBox="0 0 468 468" width="25" fill="currentColor"
+            class="bi bi-question-diamond">
+            <g>
+              <g>
+                <path
+                  d="M509.502,25.744L486.214,2.457c-3.2-3.2-8.866-3.2-12.066,0l-69.871,69.871c-3.336,3.336-3.336,8.73,0,12.066
+			l23.287,23.287c1.596,1.604,3.772,2.5,6.033,2.5s4.429-0.896,6.033-2.5l69.871-69.871
+			C512.838,34.474,512.838,29.081,509.502,25.744z M433.598,89.582l-11.221-11.221l57.805-57.805l11.221,11.221L433.598,89.582z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M445.033,101.025l-34.099-34.099c-9.984-9.984-26.214-9.984-36.198,0l-11.23,11.221c-1.604,1.596-2.5,3.763-2.5,6.033
+			c0,2.261,0.896,4.429,2.5,6.033l58.232,58.231c1.596,1.604,3.772,2.5,6.033,2.5c2.27,0,4.437-0.905,6.042-2.5l11.221-11.221
+			C455.017,127.239,455.017,111.009,445.033,101.025z M432.958,125.149l-5.188,5.188l-46.157-46.165l5.188-5.188
+			c3.328-3.311,8.738-3.328,12.066,0l34.091,34.099C436.286,116.411,436.286,121.821,432.958,125.149z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M438.155,140.722l-66.935-66.935c-12.894-12.894-30.029-19.994-48.265-19.994c-18.227,0-35.362,7.1-48.256,19.994
+			l-50.935,50.935c-1.604,1.596-2.5,3.763-2.5,6.033c0,2.27,0.896,4.429,2.5,6.033l151.39,151.398c1.664,1.664,3.849,2.5,6.033,2.5
+			c2.185,0,4.369-0.836,6.033-2.5l50.935-50.935C464.762,210.636,464.762,167.329,438.155,140.722z M426.089,225.185l-44.902,44.902
+			L241.862,130.755l44.902-44.894c9.668-9.668,22.519-14.993,36.19-14.993c13.679,0,26.53,5.325,36.198,14.993l66.935,66.935
+			C446.039,172.748,446.039,205.226,426.089,225.185z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M369.76,118.911l-23.296-23.305c-12.962-12.954-34.031-12.954-46.984,0l-23.296,23.305c-3.337,3.337-3.337,8.73,0,12.066
+			c3.337,3.336,8.738,3.336,12.066,0l23.296-23.305c6.306-6.298,16.555-6.298,22.852,0l23.296,23.305
+			c1.664,1.664,3.849,2.5,6.033,2.5c2.176,0,4.36-0.836,6.033-2.5C373.096,127.641,373.096,122.247,369.76,118.911z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M107.727,427.51l-23.287-23.287c-1.596-1.604-3.772-2.5-6.033-2.5c-2.261,0-4.429,0.896-6.033,2.5L2.502,474.094
+			c-3.336,3.337-3.336,8.73,0,12.066l23.287,23.287c1.596,1.604,3.772,2.5,6.033,2.5c2.27,0,4.437-0.896,6.033-2.5l69.871-69.871
+			C111.063,436.24,111.063,430.847,107.727,427.51z M31.823,491.348l-11.221-11.221l57.805-57.805l11.221,11.221L31.823,491.348z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M148.482,421.699l-58.231-58.231c-1.596-1.604-3.772-2.5-6.033-2.5s-4.429,0.896-6.033,2.5l-11.221,11.221
+			c-9.984,9.984-9.984,26.214,0,36.198l34.099,34.099c4.992,4.992,11.546,7.484,18.099,7.484s13.107-2.492,18.091-7.484
+			l11.23-11.221c1.604-1.596,2.5-3.763,2.5-6.033C150.982,425.471,150.086,423.304,148.482,421.699z M125.212,432.912
+			c-3.328,3.311-8.738,3.328-12.066,0l-34.099-34.099c-3.328-3.328-3.328-8.738,0-12.066l5.188-5.188l46.165,46.165L125.212,432.912
+			z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M299.881,363.451l-151.39-151.39c-3.2-3.2-8.866-3.2-12.066,0l-62.583,62.583c-26.607,26.615-26.607,69.922,0,96.529
+			l66.935,66.935c12.894,12.894,30.029,19.994,48.265,19.994s35.371-7.1,48.265-20.002l62.575-62.583
+			C303.217,372.18,303.217,366.787,299.881,363.451z M225.231,426.043c-9.668,9.668-22.519,14.993-36.19,14.993
+			c-13.679,0-26.53-5.325-36.198-14.993l-66.935-66.935c-19.951-19.951-19.951-52.429,0-72.388l56.55-56.55l139.315,139.324
+			L225.231,426.043z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M247.494,182.962c-9.455-9.446-25.924-9.455-35.362,0l-52.412,52.403c-1.604,1.596-2.5,3.763-2.5,6.033
+			s0.896,4.429,2.5,6.033l23.287,23.287c1.664,1.664,3.849,2.5,6.033,2.5s4.369-0.836,6.05-2.5l52.403-52.403
+			c4.719-4.719,7.322-11,7.322-17.681S252.213,187.681,247.494,182.962z M235.403,206.241l-46.37,46.37l-11.221-11.221l46.37-46.37
+			c2.995-3.004,8.218-3.004,11.221,0.009c1.493,1.493,2.321,3.482,2.321,5.598C237.724,202.751,236.905,204.739,235.403,206.241z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M329.005,264.473c-9.754-9.754-25.609-9.762-35.362,0l-52.403,52.403c-1.604,1.596-2.5,3.763-2.5,6.033
+			c0,2.27,0.896,4.429,2.5,6.033l23.287,23.287c1.664,1.664,3.849,2.5,6.033,2.5c2.185,0,4.369-0.828,6.033-2.492l52.412-52.403
+			C338.75,290.081,338.75,274.226,329.005,264.473z M316.93,287.76l-46.37,46.37l-11.221-11.221l46.37-46.37
+			c3.004-3.004,8.226-3.004,11.221,0C320.019,279.628,320.019,284.671,316.93,287.76z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M253.297,363.459L148.491,258.653c-3.336-3.337-8.73-3.337-12.066,0l-46.583,46.583c-3.337,3.337-3.337,8.73,0,12.066
+			l104.815,104.806c1.664,1.664,3.849,2.5,6.033,2.5c2.176,0,4.361-0.836,6.025-2.5l46.583-46.583
+			C256.634,372.189,256.634,366.796,253.297,363.459z M200.681,404.01l-92.74-92.74l34.517-34.517l92.74,92.74L200.681,404.01z" />
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M195.074,351.82l-34.935-34.944c-3.337-3.336-8.73-3.337-12.066,0c-3.336,3.337-3.336,8.73,0,12.066l34.935,34.944
+			c1.664,1.664,3.849,2.5,6.033,2.5s4.369-0.836,6.033-2.5C198.411,360.549,198.411,355.156,195.074,351.82z" />
+              </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+          </svg>
+
+          Integrated Agencies
+        </h3>
+        <p>
+          Explore all the government agencies supported by IDEAL System and check the available certificates.
+        </p>
+      </div>
+      <div class="card" onclick="window.location='https://idx.readme.io/docs/frequent-asked-questions-faqs';">
+        <h3>
+
+
+          <svg version="1.1" id="svg2958" xml:space="preserve" width="25" height="25" viewBox="0 0 682.66669 682.66669"
+            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <defs id="defs2962">
+              <clipPath clipPathUnits="userSpaceOnUse" id="clipPath2972">
+                <path d="M 0,512 H 512 V 0 H 0 Z" id="path2970" />
+              </clipPath>
+            </defs>
+            <g id="g2964" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+              <g id="g2966">
+                <g id="g2968" clip-path="url(#clipPath2972)">
+                  <g id="g2974" transform="translate(474.3101,127.0901)">
+                    <path
+                      d="m 0,0 11.84,-71.12 -71.12,11.84 c -24.57,-14.42 -53.17,-22.69 -83.72,-22.69 -64.4,0 -120.22,36.74 -147.64,90.41 90.14,1.59 162.71,75.15 162.71,165.66 0,27.1 -6.51,52.69 -18.05,75.28 0.99,0.02 1.98,0.03 2.98,0.03 91.51,0 165.69,-74.18 165.69,-165.69 C 22.69,53.18 14.42,24.57 0,0 Z"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2976" />
+                  </g>
+                  <g id="g2978" transform="translate(409.6445,210.8102)">
+                    <path d="M 0,0 H -89.076"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2980" />
+                  </g>
+                  <g id="g2982" transform="translate(409.6445,144.9317)">
+                    <path d="M 0,0 H -156.588"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2984" />
+                  </g>
+                  <g id="g2986" transform="translate(409.6445,276.6886)">
+                    <path d="M 0,0 H -63.567"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2988" />
+                  </g>
+                  <g id="g2990" transform="translate(346.38,301.1899)">
+                    <path
+                      d="m 0,0 c 0,-90.51 -72.57,-164.07 -162.71,-165.66 -0.99,-0.02 -1.98,-0.03 -2.98,-0.03 -30.55,0 -59.15,8.27 -83.72,22.69 l -71.12,-11.84 11.84,71.12 c -14.42,24.57 -22.69,53.18 -22.69,83.72 0,91.51 74.18,165.69 165.69,165.69 64.4,0 120.22,-36.74 147.64,-90.41 C -6.51,52.69 0,27.1 0,0 Z"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2992" />
+                  </g>
+                  <g id="g2994" transform="translate(142.9525,348.2912)">
+                    <path
+                      d="m 0,0 c 0,20.842 16.896,37.737 37.737,37.737 20.842,0 37.738,-16.895 37.738,-37.737 0,-20.842 -16.896,-37.737 -37.738,-37.737 v -44.201"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path2996" />
+                  </g>
+                  <g id="g2998" transform="translate(180.6898,201.3512)">
+                    <path
+                      d="M 0,0 C 7.846,0 15.363,6.899 15,15 14.636,23.127 8.409,30 0,30 -7.846,30 -15.363,23.101 -15,15 -14.636,6.873 -8.409,0 0,0"
+                      style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path3000" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          FAQs
+        </h3>
+        <p>
+          Checkout the our list of frequently asked questions with clear explanations to quickly solve yours problems.
+        </p>
+      </div>
+      <div class="card" onclick="window.location='https://idx.readme.io/reference/introduction';">
+        <h3>
+          <svg fill="currentColor" version="1.1" id="svg99" xml:space="preserve" width="25" height="25"
+            viewBox="0 0 682.66669 682.66669" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <defs id="defs103">
+              <clipPath clipPathUnits="userSpaceOnUse" id="clipPath113">
+                <path d="M 0,512 H 512 V 0 H 0 Z" id="path111" />
+              </clipPath>
+            </defs>
+            <g id="g105" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+              <g id="g107">
+                <g id="g109" clip-path="url(#clipPath113)">
+                  <g id="g115" transform="translate(497,214.9204)">
+                    <path
+                      d="m 0,0 v 82.159 h -45.313 c -5.165,24.73 -14.903,47.777 -28.284,68.228 l 32.057,32.058 -58.095,58.095 -32.057,-32.058 c -20.451,13.381 -43.498,23.119 -68.228,28.285 v 45.313 h -82.16 v -45.313 c -24.73,-5.166 -47.777,-14.904 -68.228,-28.285 l -32.057,32.058 -58.095,-58.095 32.057,-32.058 c -13.381,-20.451 -23.119,-43.498 -28.284,-68.228 H -482 V 0 h 45.313 c 5.165,-24.73 14.903,-47.777 28.284,-68.228 l -32.057,-32.058 58.095,-58.095 32.057,32.058 c 20.451,-13.381 43.498,-23.119 68.228,-28.285 v -45.312 h 82.16 v 45.312 c 24.73,5.166 47.777,14.904 68.228,28.285 l 32.057,-32.058 58.095,58.095 -32.057,32.058 C -60.216,-47.777 -50.478,-24.73 -45.313,0 Z"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path117" />
+                  </g>
+                  <g id="g119" transform="translate(387,256)">
+                    <path
+                      d="m 0,0 c 0,-72.349 -58.651,-131 -131,-131 -72.349,0 -131,58.651 -131,131 0,72.349 58.651,131 131,131 C -58.651,131 0,72.349 0,0 Z"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path121" />
+                  </g>
+                  <g id="g123" transform="translate(195.75,297.125)">
+                    <path d="M 0,0 H 96.917"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path125" />
+                  </g>
+                  <g id="g127" transform="translate(288.9167,327.25)">
+                    <path d="M 0,0 27.333,-30.125 0,-60.25"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path129" />
+                  </g>
+                  <g id="g131" transform="translate(316.25,214.875)">
+                    <path d="M 0,0 H -96.917"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path133" />
+                  </g>
+                  <g id="g135" transform="translate(223.0833,184.75)">
+                    <path d="M 0,0 -27.333,30.125 0,60.25"
+                      style="fill:none;stroke:currentColor;stroke-width:23;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                      id="path137" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+          API Reference
+        </h3>
+        <p>
+          Fully understand how to search for entities or individuals, get certificates, references, and more.
+        </p>
+      </div>
+
+    </section>
+    <section></section>
+  </div>
+</body>
