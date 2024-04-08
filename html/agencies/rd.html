@@ -1,0 +1,340 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .agency_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    border-radius: 6px;
+    border: 1px solid #ACACAC;
+  }
+
+  .card_details {
+    max-width: 800px;
+    margin: 0;
+    padding: 0px 30px 50px 55px;
+  }
+
+  .card_title .title {
+    margin: 1em 0;
+    border-bottom: 1px solid #BABABA;
+    padding-bottom: 12px !important;
+    color: #383838;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+
+  .card_title .icon {
+    position: absolute;
+    margin-left: -33px;
+    margin-top: -2px;
+    border-radius: 50%;
+    padding: 0rem;
+    width: 28px;
+    height: 28px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .card_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 32px 0;
+  }
+
+  .card_content .label {
+    font-weight: 500;
+    width: 35%;
+    color: #676767;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .card_content .content {
+    width: 65%;
+    color: #676767;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .card_contentv2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 32px 0;
+    color: #676767;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .card_contentv2 ul {
+    /* list-style-position: inside; */
+    font-size: 0.8rem;
+    list-style: none;
+    /* Remove default bullets */
+    padding-left: 0 !important;
+
+  }
+
+  .card_contentv2 ul li::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: rgba(59, 166, 43, 0.8);
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    /* margin-left: -1em; */
+    /* Also needed for space (tweak if needed) */
+  }
+
+  .card_contentv2 li:first-of-type {
+    padding-top: 0;
+  }
+
+  .card_contentv2 li {
+    padding-top: 1rem;
+  }
+
+  .card_contentv2 .label {
+    font-weight: 400;
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+
+  .card_contentv2 .content {
+    font-weight: 400;
+    width: 45%;
+    margin: 0.6rem 0;
+  }
+
+  .success_icon {
+    background: rgba(59, 166, 43, 0.8);
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 10px;
+    margin-left: -18px;
+  }
+
+  .card_content .content a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .card_content .content a:hover {
+    color: #00d1a2;
+  }
+
+  .card_content .content button {
+    padding: 0.3rem 0.5rem;
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 5px;
+    border: 1px solid #00d1a2;
+    ;
+  }
+
+  .card_content .content button:hover {
+    box-shadow: 0 3px 3px #00d1a2;
+    cursor: pointer;
+  }
+
+  .image_container {
+    margin: 20px 30px 0;
+  }
+
+  .image_container img {
+    width: 100px;
+  }
+
+  hr {
+    margin: 0 !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="system"] .card_title .title {
+      color: #FFF;
+    }
+
+    [data-color-mode="system"] .card_content .label,
+    [data-color-mode="system"] .card_content .content,
+    [data-color-mode="system"] .card_contentv2 {
+      color: #B6B6B6;
+    }
+
+    [data-color-mode="system"] hr {
+      border-bottom: 1px solid #686868 !important;
+    }
+  }
+
+  [data-color-mode="dark"] .card_title .title {
+    color: #FFF;
+  }
+
+  [data-color-mode="dark"] .card_content .label,
+  [data-color-mode="dark"] .card_content .content,
+  [data-color-mode="dark"] .card_contentv2 {
+    color: #B6B6B6;
+  }
+
+  [data-color-mode="dark"] hr {
+    border-bottom: 1px solid #686868 !important;
+  }
+</style>
+
+<body>
+  <div class="agency_container">
+    <div class="card">
+      <section class="card_details">
+        <div class="card_title">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="7" cy="7" r="6" stroke="#00D1A2" stroke-width="2" />
+              <path d="M11.5 11.5L17 17" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <p class="title">Search Types</p>
+        </div>
+        <div class="card_content"> 
+          <p class="label">Individual</p>
+          <p class="content">
+          Searches for a specific individual.<br>
+          </p>
+        </div>
+
+        <div class="card_title">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 290">
+              <rect width="290" height="290" fill="none"/>
+              <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="#00D1A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+              <line x1="48" y1="80" x2="208" y2="176" fill="none" stroke="#00D1A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+              <line x1="48" y1="176" x2="208" y2="80" fill="none" stroke="#00D1A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+            </svg>
+          </div>
+          <p class="title">Required Fields</p>
+        </div>
+        <div class="card_content">
+          <p class="label">Individual</p>
+          <p class="content"><code>firstName</code>, <code>lastName</code>, <code>SSN</code>, <code>DOB</code></p>
+        </div>
+
+        <div class="card_title">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 16 19" fill="none">
+              <path
+                d="M13 10V4.82843C13 4.29799 12.7893 3.78929 12.4142 3.41421L10.5858 1.58579C10.2107 1.21071 9.70201 1 9.17157 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17H7"
+                stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 1V4C8 5.10457 8.89543 6 10 6H13" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 9H9" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 12H8" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+              <path d="M13 14V18" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+              <path d="M15 16H11" stroke="#00D1A2" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <p class="title">Additional Data Received</p>
+        </div>
+        <div class="card_content">
+          <p class="label">Status</p>
+          <p class="content">The status of the individual search.</p>     
+				</div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Full name</p>
+          <p class="content">	The individual's full name.
+          </p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Last name</p>
+          <p class="content">The individual's last name.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Second last name</p>
+          <p class="content">The individual's second last name.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Name</p>
+          <p class="content">The individual's name.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Birth date</p>
+          <p class="content">The individual's birth date.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Birth municipality</p>
+          <p class="content">The individual's birth municipality.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Gender</p>
+          <p class="content">The individual's gender.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Father full name</p>
+          <p class="content">The full name of the individual's father.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Mother full name</p>
+          <p class="content">The full name of the individual's mother.</p>
+        </div>
+        <hr/>
+        <div class="card_content">
+          <p class="label">Death date</p>
+          <div class="content">The individual's death date. Note:
+            <ul>
+              <li>Data on death events is limited to pre-2021 deaths in Puerto Rico.</li>
+              <li>We cannot validate death events that occurred after the stated limit (pre-2021) and outside of Puerto Rico.</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    </div>
+  </div>
+</body>
+
