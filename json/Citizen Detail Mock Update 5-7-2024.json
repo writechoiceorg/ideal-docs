@@ -1,0 +1,758 @@
+{
+    "referenceId": "643775b4-1234-4d35-afad-8e0c41c57e74",
+    "nusnumber": "20230116-30afb",
+    "username": "teste@agency.pr.gov",
+    "entityname": "Lucas Rodrigues",
+    "createdDate": "05:29am 16/01/2023",
+    "expirationDate": "15/feb/2023",
+    "notes": null,
+    "profile_blob_id": "avatar",
+    "ssn": "123456700",
+    "status": "success",
+    "data": [
+        {
+            "Agency": "ADSEF",
+            "AgencyDisplayName": "ADSEF",
+            "Details": [
+                {
+                    "Type": "Certificación participante de beneficios y Certificación de composición familiar",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "INFO",
+                    "Observation": "Es beneficiario de PAN",
+                    "CertificateId": "a0968c47-fdfc-42ca-b4d0-c94eb54b69ca"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "CheckIfExists",
+                    "Note": "",
+                    "Data": {
+                        "CheckIfExistsResponse": {
+                            "ExistsResult": {
+                                "Beneficiary": true,
+                                "StatusCode": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "Name": "GetCertification",
+                    "Note": "",
+                    "Data": {
+                        "GetCertificacionResponse": {
+                            "Certificacion": {
+                                "ID": 4053832123,
+                                "StatusCode": 0,
+                                "Beneficiary": 1,
+                                "SocialSecurity": "000000000",
+                                "Name": "LUCAS",
+                                "LastName": "RODRIGUES",
+                                "LastName2": "ADSUAR",
+                                "Address1": "RR1 BOX 12345",
+                                "Address2": "",
+                                "City": "TOA ALTA",
+                                "ZipCode": "953",
+                                "ZipCode4": "0",
+                                "Email": "example@domain.com",
+                                "Services": {
+                                    "PAN": 1,
+                                    "TANF": 1,
+                                    "PANTerm": "01/Feb/2025",
+                                    "TANFTerm": "01/Jun/2024"
+                                },
+                                "Amounts": {
+                                    "PANAmount": 198,
+                                    "TANFAmount": 80
+                                },
+                                "Income": 100,
+                                "PartPan": 2,
+                                "PartTand": 2,
+                                "CompFamily": 9999,
+                                "RMO": 117101,
+                                "CSI": "TOA ALTA",
+                                "FechaSolicitudCertificado": "2023-08-28",
+                                "FechaExpiraCertificado": "2023-09-26",
+                                "Ingreso": 100,
+                                "IngresoT": 0,
+                                "Otrosingresospan": 0,
+                                "Otrosingresospe": 0,
+                                "Cant_recae": 0,
+                                "Cant_recpan": 0,
+                                "CompFamilia": [
+                                    {
+                                        "Cod_Rel": "JEFE DE FAMILIA",
+                                        "Nombre": "LUCAS M RODRIGUES ADSUAR",
+                                        "pan": 1,
+                                        "tanf": 1,
+                                        "fact _eleg": "NO APLICA",
+                                        "motivo": "NO APLICA"
+                                    },
+                                    {
+                                        "Cod_Rel": "HIJA",
+                                        "Nombre": "Ana M RODRIGUES SALGADO",
+                                        "pan": 1,
+                                        "tanf": 1,
+                                        "fact _eleg": "NO APLICA",
+                                        "motivo": "NO APLICA"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "Name": "GetValidation",
+                    "Note": "",
+                    "Data": {
+                        "GetValidationResponse": {
+                            "Validacion": {
+                                "ID": 4053832123,
+                                "StatusCode": 0,
+                                "Valid": true,
+                                "Beneficiary": 1,
+                                "SocialSecurity": "6700",
+                                "Name": "LUCAS",
+                                "LastName": "RODRIGUES",
+                                "LastName2": "ADSUAR",
+                                "Address1": "RR1 BOX 12345",
+                                "Address2": "",
+                                "City": "TOA ALTA",
+                                "ZipCode": "953",
+                                "ZipCode4": "0",
+                                "Email": "example@domain.com",
+                                "Services": {
+                                    "PAN": 1,
+                                    "TANF": 1,
+                                    "PANTerm": "N/A",
+                                    "TANFTerm": "N/A"
+                                },
+                                "Amounts": {
+                                    "PANAmount": 198,
+                                    "TANFAmount": 80
+                                },
+                                "Income": 100,
+                                "PartPan": 1,
+                                "PartTanf": 1,
+                                "ComFamily": 9999,
+                                "RMO": 117101,
+                                "CSI": "TOA ALTA"
+                            }
+                        }
+                    }
+                },
+                {
+                    "Name": "GetPDFCert",
+                    "Note": "",
+                    "Data": {
+                        "GetPDFCertResponse": {
+                            "PDFCert": "a0968c47-fdfc-42ca-b4d0-c94eb54b69ca"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "ASG",
+            "AgencyDisplayName": "ASG",
+            "Details": [
+                {
+                    "Type": "Certificación de elegibilidad del RUL",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "INFO",
+                    "Observation": "No está registrado en RUL",
+                    "CertificateId": ""
+                },
+                {
+                    "Type": "Certificación de elegibilidad del RUP",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "8e844ab9-9782-4769-b690-ddabe96e8eca"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "RULCompliance",
+                    "Note": "",
+                    "Data": {
+                        "certificateNumber": "",
+                        "expeditionDate": "",
+                        "expirationDate": "",
+                        "commercialName": "",
+                        "socialSecurity": "",
+                        "psNumber": "0",
+                        "phone": "",
+                        "email": "",
+                        "inCompliance": false,
+                        "ssnExist": false,
+                        "hasAmendment": false
+                    }
+                },
+                {
+                    "Name": "RULCertificate",
+                    "Note": "",
+                    "Data": {
+                        "error": 400,
+                        "message": "ASG RUL Certificate not Found"
+                    }
+                },
+                {
+                    "Name": "RUPCompliance",
+                    "Note": "",
+                    "Data": {
+                        "certificateNumber": "202326123",
+                        "expeditionDate": "2023-06-01T00:00:00Z",
+                        "expirationDate": "2024-06-01T00:00:00Z",
+                        "commercialName": null,
+                        "socialSecurity": "123-45-6789",
+                        "psNumber": "0",
+                        "phone": "(123) 123-4444",
+                        "email": "email@citizenemail.com",
+                        "inCompliance": true,
+                        "ssnExist": true,
+                        "hasAmendment": false
+                    }
+                },
+                {
+                    "Name": "RUPCertificate",
+                    "Note": "",
+                    "Data": {
+                        "message": "Success",
+                        "certificate": "8e844ab9-9782-4769-b690-ddabe96e8eca"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "RETIRO",
+            "AgencyDisplayName": "RETIRO",
+            "Details": [
+                {
+                    "Type": "Certificado de cumplimiento con la Junta de Retiro del Gobierno de Puerto Rico",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "690133e8-f458-40a6-8302-cddd5a2497ca"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Compliance",
+                    "Note": "",
+                    "Data": {
+                        "status": "success",
+                        "inCompliance": "true",
+                        "ssnExist": "true",
+                        "hasPaymentPlan": "false"
+                    }
+                },
+                {
+                    "Name": "Certificate",
+                    "Note": "",
+                    "Data": {
+                        "status": "success",
+                        "certificate": "690133e8-f458-40a6-8302-cddd5a2497ca"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "ASUME",
+            "AgencyDisplayName": "ASUME",
+            "Details": [
+                {
+                    "Type": "Certificación Negativa de Caso de Pension Alimentaria o Certificacion de estado de cuenta",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "175001c1-cf16-4376-beed-a98740b06eca"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "GetParticipantStatus",
+                    "Note": "",
+                    "Data": {
+                        "Success": true,
+                        "Message": "Success",
+                        "InCompliance": "True",
+                        "PaymentPlan": null,
+                        "CertificationPDFBytes": "175001c1-cf16-4376-beed-a98740b06eca"
+                    }
+                },
+                {
+                    "Name": "ValidatePerson",
+                    "Data": {
+                        "status": "success",
+                        "data": {
+                            "FullName": "LUCAS",
+                            "LastName": "RODRIGUES",
+                            "DateOfBirth": "1990-04-22",
+                            "CaseNumbers": {
+                                "CaseNumber": "0307123"
+                            }
+                        }
+                    }
+                },
+                {
+                    "Name": "GetChildSupportCase",
+                    "Data": {
+                        "status": "success",
+                        "data": {
+                            "CaseNumber": "0307123",
+                            "Type": "PNC01",
+                            "LastPaymentAmount": "1200.00",
+                            "LastPaymentDate": "2021-05-11",
+                            "ObligatedAmount": "0.00",
+                            "BalanceAmount": "200.00",
+                            "PaymentFrequency": "monthly",
+                            "CustodialParentSSN": "123-45-6701",
+                            "CustodialParentFullName": "ROSA",
+                            "CustodialParentLastName": "SILVA",
+                            "CustodialParentDateOfBirth": "1990-01-02",
+                            "CustodialParentDateOfDeath": "2022-05-11",
+                            "Non_CustodialParentSSN": "123-45-6700",
+                            "Non_CustodialParentFullName": "LUCAS",
+                            "Non_CustodialParentLastName": "RODRIGUES",
+                            "Non_CustodialParentDateOfBirth": "1989-05-12",
+                            "Non_CustodialParentDateOfDeath": "2022-04-20",
+                            "Childs": {
+                                "ChildSSN": "123-45-6702",
+                                "ChildFullName": "MIGUEL",
+                                "ChildLastName": "RODRIGUES SILVA",
+                                "ChildDateofBirth": "2010-02-02",
+                                "ChildDateOfDeath": "2022-02-02"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "CFSE",
+            "AgencyDisplayName": "CFSE",
+            "Details": [
+                {
+                    "Type": "Certificado de Deuda",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "58091bfb-53de-494f-be17-d5607422d7ca"
+                },
+                {
+                    "Type": "Certificación de Póliza",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "361afdb7-e928-4155-8d2c-47c33730f6ca"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Debt",
+                    "Note": "",
+                    "Data": {
+                        "requestId": "e452c85c-56f3-4252-cc75-08dc6b62bb98",
+                        "hasDebt": false,
+                        "hasPolicy": true,
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "cancelledPolicies": null
+                    }
+                },
+                {
+                    "Name": "DebtCert",
+                    "Note": "",
+                    "Data": {
+                        "certificationDocument": "58091bfb-53de-494f-be17-d5607422d7ca",
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "backendStatus": null
+                    }
+                },
+                {
+                    "Name": "PolicyCert",
+                    "Note": "",
+                    "Data": {
+                        "certificationDocument": "361afdb7-e928-4155-8d2c-47c33730f6ca",
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "backendStatus": null
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "HACIENDA",
+            "AgencyDisplayName": "Dpto. de Hacienda",
+            "Details": [
+                {
+                    "Type": "Certificación De Deuda (SC 6096)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "69426986-41f4-4b36-b1d2-eef4d002d422"
+                },
+                {
+                    "Type": "Certificación de Radicación de Planillas de Contribución sobre Ingresos (SC 6088)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "223c7c56-7a6d-4c42-bcd6-8c8a7a83ad0e"
+                },
+                {
+                    "Type": "Certificado de Radicación de Planillas del Impuesto sobre Ventas y Uso (IVU) (SC 2942)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "60504bd9-0dca-4c9f-9bb0-cf8a6ccc5528"
+                },
+                {
+                    "Type": "Certificación del Registro de Comerciante",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "351f0fa4-28e1-4a91-8c75-a995e2b64624"
+                },
+                {
+                    "Type": "Relevo de Retención",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "c80cd9b1-c9c7-44b1-96e8-d1d8e1131749"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Authorize",
+                    "Data": {
+                        "Successful": true,
+                        "CustomerExists": true,
+                        "CustomerKey": 1122949120,
+                        "Approved": true
+                    }
+                },
+                {
+                    "Name": "Compliance",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 1122949120,
+                        "merchantDetail": {
+                            "merchantMatch": 0,
+                            "merchantActive": true,
+                            "merchantCompliant": true,
+                            "merchantNAICS": "54151"
+                        },
+                        "complianceDetail": {
+                            "debtCompliant": true,
+                            "filingCompliant": true,
+                            "filingCompliantSUT": true,
+                            "PaymentPlan": false
+                        }
+                    }
+                },
+                {
+                    "Name": "ComplianceDocuments",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 210196480,
+                        "merchantDetail": {
+                            "merchantMatch": 0,
+                            "merchantActive": true,
+                            "merchantCompliant": true
+                        },
+                        "complianceDetail": {
+                            "debtCompliant": true,
+                            "filingCompliant": true,
+                            "filingCompliantSUT": true,
+                            "PaymentPlan": false
+                        },
+                        "documentsDetail": {
+                            "filingCertificate": "223c7c56-7a6d-4c42-bcd6-8c8a7a83ad0e",
+                            "filingCertificateSUT": "60504bd9-0dca-4c9f-9bb0-cf8a6ccc5528",
+                            "debtCertificate": "69426986-41f4-4b36-b1d2-eef4d002d422",
+                            "merchantCertificate": "351f0fa4-28e1-4a91-8c75-a995e2b64624",
+                            "waiver": "c80cd9b1-c9c7-44b1-96e8-d1d8e1131749"
+                        }
+                    }
+                },
+                {
+                    "Name": "Income",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 210196480,
+                        "taxYear": 2021,
+                        "addressDetail": {
+                            "addressType": 1,
+                            "addressCountry": "USA",
+                            "addressUrbanization": "SIERRA ALTA",
+                            "addressLine1": "400 CARR 953",
+                            "addressLine2": "",
+                            "addressUnitType": "APT",
+                            "addressUnit": "147",
+                            "addressCity": "SAN JUAN",
+                            "addressState": "PR",
+                            "addressZip": "009269670"
+                        },
+                        "incomeDetail": {
+                            "incomeWagesPuertoRico": 0,
+                            "incomeWagesFederal": 0,
+                            "incomeServicesRenderedGross": 0,
+                            "incomeTotal": 12345,
+                            "incomeAGI": 12345,
+                            "incomeCorpTotalReg": 0,
+                            "incomeCorpNetReg": 0,
+                            "incomeCorpTotalAlt": 0,
+                            "incomeCorpNetAlt": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "JUSTICIA",
+            "AgencyDisplayName": "Policia / Justicia",
+            "Details": [
+                {
+                    "Type": "Certificación de Antecedentes Penales",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "8074d947-f540-45ea-977c-518d1ca86214"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "CAP",
+                    "Data": {
+                        "ids": [
+                            null,
+                            {
+                                "type": "SsnIdentification",
+                                "ssn": "123456789"
+                            },
+                            {
+                                "type": "DriverLicenseIdentification",
+                                "license": "123456"
+                            }
+                        ],
+                        "first_name": "LUCAS",
+                        "middle_name": "MIGUEL",
+                        "last_name": "RODRIGUES",
+                        "mother_last_name": "ADSUAR",
+                        "birth_date": 685425600000,
+                        "antecedents": false,
+                        "tx_id": "20221114-b42cc"
+                    }
+                },
+                {
+                    "Name": "Criminalcheck",
+                    "Data": {
+                        "code": 0,
+                        "positive": false
+                    }
+                },
+                {
+                    "Name": "Retrieve",
+                    "Data": {
+                        "generated_date": 1668436795309,
+                        "certificate_base64": "8074d947-f540-45ea-977c-518d1ca86214"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "DTOP",
+            "AgencyDisplayName": "DTOP",
+            "Details": [
+                {
+                    "Type": "Vigencia de licencia de conducir o identificación de PR",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": ""
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "License",
+                    "Data": {
+                        "license": {
+                            "id": 123456,
+                            "category": "3",
+                            "type": "LICENSE",
+                            "realId": false,
+                            "expeditionDate": 1455808244000,
+                            "expirationDate": 1613966400000,
+                            "dateOfBirth": -1289332800000,
+                            "address": {
+                                "line1": "URB VILLA CAPARRA ",
+                                "line2": "#6 CALLE L",
+                                "city": "GUAYNABO",
+                                "state": "PR",
+                                "zipCode": "00969"
+                            },
+                            "unpaidFines": 15,
+                            "points": 0,
+                            "pointStep": null,
+                            "suspended": false,
+                            "restrictions": null,
+                            "underAge": false,
+                            "under21": false,
+                            "renewalInProgress": false,
+                            "alerts": null,
+                            "expired": true
+                        },
+                        "entity": {
+                            "firstName": "LUCAS MIGUEL  ",
+                            "lastName": "RODRIGUES ADSUAR ",
+                            "fatherLastName": "RODRIGUES",
+                            "motherLastName": "ADSUAR",
+                            "sex": "M",
+                            "height": "504",
+                            "weight": "138",
+                            "eyeColor": "BRO",
+                            "hairColor": "BRO",
+                            "skinColor": "FAR",
+                            "bloodType": null,
+                            "donor": false,
+                            "selectiveService": false,
+                            "veteran": false
+                        }
+                    }
+                },
+                {
+                    "Name": "LicensePhoto",
+                    "Data": {
+                        "blob_id": "e296ad4f-2960-4714-b09a-624a84165edd"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "DTRH",
+            "AgencyDisplayName": "Dpto. del Trabajo",
+            "Details": [
+                {
+                    "Type": "Certificación de Registro como Patrono y de Deuda por Concepto de Seguro de Desempleo y Seguro por Incapacidad",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "27af0ecf-3379-4269-b8c5-f698cfbf2b53"
+                },
+                {
+                    "Type": "Certificación de Registro como Patrono y de Deuda por Concepto de Seguro Social Choferil",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "d973c664-4dc6-47ef-9a92-7fcc87d3b92b"
+                }
+            ],
+            "AgencyResponses": []
+        },
+        {
+            "Agency": "CRIM",
+            "AgencyDisplayName": "CRIM",
+            "Details": [
+                {
+                    "Type": "Certificación de Deuda por Todo los Conceptos",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "INFO",
+                    "Observation": "",
+                    "CertificateId": "295d2f6b-8d08-4972-a22b-4518e9758a28"
+                },
+                {
+                    "Type": "Certificación de Radicación de Planilla sobre la Propiedad Mueble",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "INFO",
+                    "Observation": "",
+                    "CertificateId": "96c722f5-36a7-4b70-98d3-c708d912d43f"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Compliance",
+                    "Data": {
+                        "id": "123456789",
+                        "entityName": "",
+                        "firstName": "Lucas",
+                        "lastName": "Rodrigues",
+                        "hasProperty": true,
+                        "propertyType": "Mueble e Inmueble",
+                        "taxCompliance": true,
+                        "debtCompliance": true,
+                        "hasPaymentPlan": false
+                    }
+                },
+                {
+                    "Name": "GenerateDebtCertificate",
+                    "Data": {
+                        "CertificationRequestId": 1172792,
+                        "FileContentId": 1495088
+                    }
+                },
+                {
+                    "Name": "GenerateTaxCertificate",
+                    "Data": {
+                        "CertificationRequestId": 1172793,
+                        "FileContentId": 1495089
+                    }
+                },
+                {
+                    "Name": "DownloadDebtCertificate",
+                    "Data": {
+                        "FileName": "f7f233a8-ab78-4e53-91a8-b12e3b5283b1.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "295d2f6b-8d08-4972-a22b-4518e9758a28"
+                    }
+                },
+                {
+                    "Name": "DownloadTaxCertificate",
+                    "Data": {
+                        "FileName": "65b77b15-7f76-4d8a-867b-559965afc6cf.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "96c722f5-36a7-4b70-98d3-c708d912d43f"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "REGISTRODEMOGRAFICO",
+            "AgencyDisplayName": "RegistroDemografico",
+            "Details": [],
+            "AgencyResponses": [
+                {
+                    "Name": "PersonDetails",
+                    "Note": "Data on death events is limited to pre-2021 deaths in Puerto Rico. We cannot validate death events that occurred after the stated limit (pre-2021) and outside of Puerto Rico.",
+                    "Data": {
+                        "status": "success",
+                        "data": {
+                            "FULLNAME": "LUCAS MIGUEL RODRIGUES ADSUAR",
+                            "LASTNAME": "RODRIGUES",
+                            "SECONDLASTNAME": "ADSUAR",
+                            "NAME": "LUCAS MIGUEL",
+                            "BIRTHDATE": "19910310",
+                            "BIRTHMUNICIPALITY": "SAN JUAN",
+                            "GENDER": "M",
+                            "FATHERFULLNAME": "JOSE CARLOS RODRIGUES",
+                            "MOTHERFULLNAME": "MARIA CECILIA ADSUAR",
+                            "DEATH_DATE": null
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
