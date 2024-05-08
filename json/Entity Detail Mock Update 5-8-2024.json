@@ -1,0 +1,531 @@
+{
+    "referenceId": "a425f727-1234-432e-8744-9311ecd44d96",
+    "nusnumber": "20230830-a425f",
+    "username": "plataforma@agencia.pr.gov",
+    "entityname": "Code Cat Technology Consortium, LLC",
+    "createdDate": "04:36pm 30/08/2023",
+    "expirationDate": "29/sep/2023",
+    "notes": null,
+    "profile_blob_id": "",
+    "ein": "660123451",
+    "status": "success",
+    "data": [
+        {
+            "Agency": "ASG",
+            "AgencyDisplayName": "ASG",
+            "Details": [
+                {
+                    "Type": "Certificación de elegibilidad del RUL",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "379728ed-9146-4b87-aae4-a4181bf534ac"
+                },
+                {
+                    "Type": "Certificación de elegibilidad del RUP",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "INFO",
+                    "Observation": "No está registrado en RUP",
+                    "CertificateId": ""
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "RULCompliance",
+                    "Note": "",
+                    "Data": {
+                        "certificateNumber": "202326123",
+                        "expeditionDate": "2023-05-24T00:00:00Z",
+                        "expirationDate": "2024-05-24T00:00:00Z",
+                        "commercialName": "Code Cat Technology Consortium LLC",
+                        "socialSecurity": "660-12-1234",
+                        "psNumber": "0",
+                        "phone": "(123) 123-1234",
+                        "email": "email@companyemail.com",
+                        "inCompliance": true,
+                        "ssnExist": true,
+                        "hasAmendment": false
+                    }
+                },
+                {
+                    "Name": "RULCertificate",
+                    "Note": "",
+                    "Data": {
+                        "message": "Success",
+                        "certificate": "379728ed-9146-4b87-aae4-a4181bf534ac"
+                    }
+                },
+                {
+                    "Name": "RUPCompliance",
+                    "Note": "",
+                    "Data": {
+                        "certificateNumber": "",
+                        "expeditionDate": "",
+                        "expirationDate": "",
+                        "commercialName": "",
+                        "socialSecurity": "",
+                        "psNumber": "0",
+                        "phone": "",
+                        "email": "",
+                        "inCompliance": false,
+                        "ssnExist": false,
+                        "hasAmendment": false
+                    }
+                },
+                {
+                    "Name": "RUPCertificate",
+                    "Note": "",
+                    "Data": {
+                        "error": 400,
+                        "message": "ASG RUP Certificate not Found"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "ASUME",
+            "AgencyDisplayName": "ASUME",
+            "Details": [
+                {
+                    "Type": "Certificación de Estado de Cumplimiento",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "a3371b72-b1c4-42e7-91a3-a1a8a5f004ac"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "GetEmployerStatus",
+                    "Note": "",
+                    "Data": {
+                        "Success": true,
+                        "Message": "Success",
+                        "InCompliance": "True",
+                        "PaymentPlan": null,
+                        "CertificationPDFBytes": "a3371b72-b1c4-42e7-91a3-a1a8a5f004ac"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "CFSE",
+            "AgencyDisplayName": "CFSE",
+            "Details": [
+                {
+                    "Type": "Certificado de Deuda",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "bbfaabcc-9985-4e57-aa83-4f0125a348ac"
+                },
+                {
+                    "Type": "Certificación de Póliza",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "9a2be5e5-157a-4df0-a1b6-b055f6abb1ac"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Debt",
+                    "Note": "",
+                    "Data": {
+                        "requestId": "78279a18-98e3-40bf-d3bc-08dc6f4b5ac",
+                        "hasDebt": false,
+                        "hasPolicy": true,
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "cancelledPolicies": null
+                    }
+                },
+                {
+                    "Name": "DebtCert",
+                    "Note": "",
+                    "Data": {
+                        "certificationDocument": "bbfaabcc-9985-4e57-aa83-4f0125a348ac",
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "backendStatus": null
+                    }
+                },
+                {
+                    "Name": "PolicyCert",
+                    "Note": "",
+                    "Data": {
+                        "certificationDocument": "9a2be5e5-157a-4df0-a1b6-b055f6abb1ac",
+                        "success": true,
+                        "statusCode": 0,
+                        "statusMessage": null,
+                        "backendStatus": null
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "ESTADO",
+            "AgencyDisplayName": "Dpto. de Estado",
+            "Details": [
+                {
+                    "Type": "Good Standing",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "afb661e9-db12-4569-9e8a-e64febfbcac"
+                },
+                {
+                    "Type": "Certificado de Existencia",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "8a4d5573-4c60-4598-bd4a-18de4dbb5ac"
+                },
+                {
+                    "Type": "Certificación de incorporación o Autorización para hacer Negocios en Puerto Rico",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "605f8fd2-5b31-413e-8231-34a3f6153ac"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Compliance",
+                    "Note": "",
+                    "Data": {
+                        "name": "Code Cat Technology Consortium LLC",
+                        "inscriptionDate": "2016-08-28T19:44:37+00:00",
+                        "terminationDate": null,
+                        "effectiveDate": "2016-08-28T19:44:37+00:00",
+                        "corpClass": 15,
+                        "corpType": 1,
+                        "status": "ACTIVA",
+                        "jurisdiction": 1,
+                        "inCompliance": true,
+                        "inPaymentPlan": false,
+                        "inComplianceCOE": true,
+                        "inComplianceCOGS": true,
+                        "inComplianceCOI ": true
+                    }
+                },
+                {
+                    "Name": "Certificate",
+                    "Note": "",
+                    "Data": {
+                        "certificateOfGoodStandingBase64": "afb661e9-db12-4569-9e8a-e64febfbcac",
+                        "certificateOfExistenceBase64": "8a4d5573-4c60-4598-bd4a-18de4dbb5ac",
+                        "expirationDateGoodStanding": "2025-05-08T17:18:24.994+00:00",
+                        "expirationDateExistence": "2024-06-07T17:18:24.994+00:00",
+                        "certificateOfIncorporationBase64": "605f8fd2-5b31-413e-8231-34a3f6153ac"
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "HACIENDA",
+            "AgencyDisplayName": "Dpto. de Hacienda",
+            "Details": [
+                {
+                    "Type": "Certificación De Deuda (SC 6096)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "898e6314-5daa-49ed-a900-d9594e1665a"
+                },
+                {
+                    "Type": "Certificación de Radicación de Planillas de Contribución sobre Ingresos (SC 6088)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "577101ba-eb52-4e45-8fc2-b790500f73ac"
+                },
+                {
+                    "Type": "Certificado de Radicación de Planillas del Impuesto sobre Ventas y Uso (IVU) (SC 2942)",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "0c83f24d-1d5c-4394-b8b0-a691e1a28cac"
+                },
+                {
+                    "Type": "Certificación del Registro de Comerciante",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "29290149-dddb-4c64-a4d8-6103c776f4ac"
+                },
+                {
+                    "Type": "Relevo de Retención",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "acf5125c-e98f-4a7b-ae42-f924590a24ac"
+                },
+                {
+                    "Type": "Certificación de Vigencia de Exención Contributiva de Entidad Sin Fines de Lucro",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "96c3d65b-1234-4ddd-b9b1-04bae2b37ac"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Authorize",
+                    "Note": "",
+                    "Data": {
+                        "Successful": true,
+                        "CustomerExists": true,
+                        "CustomerKey": 382275584,
+                        "Approved": true
+                    }
+                },
+                {
+                    "Name": "Compliance",
+                    "Note": "",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 382275584,
+                        "merchantDetail": [
+                            {
+                                "merchantMatch": 0,
+                                "merchantActive": true,
+                                "merchantCompliant": true,
+                                "merchantNAICS": "81112"
+                            }
+                        ],
+                        "complianceDetail": [
+                            {
+                                "debtCompliant": true,
+                                "filingCompliant": true,
+                                "filingCompliantSUT": true,
+                                "PaymentPlan": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Name": "ComplianceDocuments",
+                    "Note": "",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 382275584,
+                        "merchantDetail": [
+                            {
+                                "merchantMatch": 0,
+                                "merchantActive": true,
+                                "merchantCompliant": true
+                            }
+                        ],
+                        "complianceDetail": [
+                            {
+                                "debtCompliant": true,
+                                "filingCompliant": true,
+                                "filingCompliantSUT": true,
+                                "PaymentPlan": false
+                            }
+                        ],
+                        "documentsDetail": [
+                            {
+                                "filingCertificate": "577101ba-eb52-4e45-8fc2-b790500f73ac",
+                                "filingCertificateSUT": "0c83f24d-1d5c-4394-b8b0-a691e1a28cac",
+                                "debtCertificate": "898e6314-5daa-49ed-a900-d9594e1665ac",
+                                "merchantCertificate": "29290149-dddb-4c64-a4d8-6103c776f4ac",
+                                "taxExemptionCertificate": "96c3d65b-1234-4ddd-b9b1-04bae2b37ac",
+                                "waiver": "acf5125c-e98f-4a7b-ae42-f924590a24ac"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Name": "Income",
+                    "Note": "",
+                    "Data": {
+                        "successful": true,
+                        "customerExists": true,
+                        "requestorExists": true,
+                        "nameMatch": 0,
+                        "customerKey": 1712123445,
+                        "taxYear": 2021,
+                        "addressDetail": [
+                            {
+                                "addressType": 1,
+                                "addressCountry": "USA",
+                                "addressUrbanization": "",
+                                "addressLine1": "100 Sierra Alta",
+                                "addressLine2": "APT 0314",
+                                "addressUnitType": "STE",
+                                "addressUnit": "0134",
+                                "addressCity": "SAN JUAN",
+                                "addressState": "PR",
+                                "addressZip": "009012347"
+                            }
+                        ],
+                        "incomeDetail": [
+                            {
+                                "incomeWagesPuertoRico": 0,
+                                "incomeWagesFederal": 0,
+                                "incomeServicesRenderedGross": 0,
+                                "incomeServicesRenderedNet": 0,
+                                "incomeTotal": 0,
+                                "incomeAGI": 0,
+                                "incomeCorpTotalReg": 12345,
+                                "incomeCorpNetReg": 1234,
+                                "incomeCorpTotalAlt": 0,
+                                "incomeCorpNetAlt": 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Agency": "DTRH",
+            "AgencyDisplayName": "Dpto. del Trabajo",
+            "Details": [
+                {
+                    "Type": "Certificación de Registro como Patrono y de Deuda por Concepto de Seguro de Desempleo y Seguro por Incapacidad",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "5e6d887e-663a-4832-ad88-6035cc920aac"
+                },
+                {
+                    "Type": "Certificación de Registro como Patrono y de Deuda por Concepto de Seguro Social Choferil",
+                    "ComplianceStatus": "NOCOMPLIANCE",
+                    "ObservationStatus": "INFO",
+                    "Observation": "No Cumple",
+                    "CertificateId": "e07e857c-0299-406d-b4a5-f97be64f3cac"
+                }
+            ],
+            "AgencyResponses": []
+        },
+        {
+            "Agency": "CRIM",
+            "AgencyDisplayName": "CRIM",
+            "Details": [
+                {
+                    "Type": "Certificación de Deuda por Todo los Conceptos",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "9083f3b6-31ff-409b-b593-7453fbd465ac"
+                },
+                {
+                    "Type": "Certificación de Radicación de Planilla sobre la Propiedad Mueble",
+                    "ComplianceStatus": "INCOMPLIANCE",
+                    "ObservationStatus": "",
+                    "Observation": "",
+                    "CertificateId": "d3831028-01df-45ff-9edb-02b1efee93ac"
+                },
+                {
+                    "Type": "Certificación Negativa sobre la Propiedad Mueble",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "INFO",
+                    "Observation": "No posee propiedad Mueble",
+                    "CertificateId": "0b05a4bf-ec73-48c9-acff-b7da9736816b"
+                },
+                {
+                    "Type": "Certificación Negativa de Propiedad Mueble e Inmueble",
+                    "ComplianceStatus": "",
+                    "ObservationStatus": "INFO",
+                    "Observation": "No posee propiedad Mueble e Inmueble",
+                    "CertificateId": "4c80e8ca-9d9e-4ac5-a7cb-aca0cca0199b"
+                }
+            ],
+            "AgencyResponses": [
+                {
+                    "Name": "Compliance",
+                    "Note": "",
+                    "Data": {
+                        "id": "660123456",
+                        "entityName": "",
+                        "firstName": "Code Cat Technology Consortium LLC",
+                        "lastName": "",
+                        "hasProperty": true,
+                        "propertyType": "Mueble",
+                        "taxCompliance": true,
+                        "debtCompliance": true,
+                        "hasPaymentPlan": false
+                    }
+                },
+                {
+                    "Name": "GenerateDebtCertificate",
+                    "Note": "",
+                    "Data": {
+                        "CertificationRequestId": 4800676,
+                        "FileContentId": 6900321
+                    }
+                },
+                {
+                    "Name": "GenerateTaxCertificate",
+                    "Note": "",
+                    "Data": {
+                        "CertificationRequestId": 4800684,
+                        "FileContentId": 6900328
+                    }
+                },
+                {
+                    "Name": "GenerateMuebleNegativeCertificate",
+                    "Note": "",
+                    "Data": {
+                        "CertificationRequestId": 4842533,
+                        "FileContentId": 6951985
+                    }
+                },
+                {
+                    "Name": "GenerateNegativeCertificate",
+                    "Note": "",
+                    "Data": {
+                        "CertificationRequestId": 4842566,
+                        "FileContentId": 6952070
+                    }
+                },
+                {
+                    "Name": "DownloadDebtCertificate",
+                    "Note": "",
+                    "Data": {
+                        "FileName": "9b15279a-e714-479c-9ac7-0e4ebca8a1e1.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "8a4a3873-6274-41da-bacf-54c81a2736a7"
+                    }
+                },
+                {
+                    "Name": "DownloadTaxCertificate",
+                    "Note": "",
+                    "Data": {
+                        "FileName": "209044df-9c02-4eed-9acc-770d2b408468.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "d3831028-01df-4acf-9edb-02b1efee934d"
+                    }
+                },
+                {
+                    "Name": "DownloadMuebleNegativeCertificate",
+                    "Note": "",
+                    "Data": {
+                        "FileName": "dc60cc4c-cb66-4094-9bec-ac87bf1b8810.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "0b05a4bf-ec73-48c9-acff-b7da9736816b"
+                    }
+                },
+                {
+                    "Name": "DownloadNegativeCertificate",
+                    "Note": "",
+                    "Data": {
+                        "FileName": "1c0f104f-6cbd-4cd2-acae-aa6bac3995dd.pdf.pdf",
+                        "FileExtension": ".pdf",
+                        "FileContent": "4c80e8ca-9d9e-4ac5-a7cb-aca0cca0199b"
+                    }
+                }
+            ]
+        }
+    ]
+}
